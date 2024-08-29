@@ -3,7 +3,7 @@ session_start();
 require('dbconnect.php');
 
 if(isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()){
-    // ログインしている
+    // ログインしている 
     $_SESSION['time'] = time();
 
     $members = $db->prepare('SELECT * FROM members WHERE id=?');
